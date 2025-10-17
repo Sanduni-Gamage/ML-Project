@@ -1,0 +1,63 @@
+name: mlproject1
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - numpy<2.0
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - pip
+
+  - pip:
+    # Advanced ML Libraries
+    - xgboost
+    - lightgbm
+    - imbalanced-learn  # For SMOTE and handling class imbalance
+    
+    # PyTorch (CPU only to avoid CUDA dependency issues)
+    - torch --index-url https://download.pytorch.org/whl/cpu
+    - torchvision --index-url https://download.pytorch.org/whl/cpu
+    - torchaudio --index-url https://download.pytorch.org/whl/cpu
+    
+    # TabTransformer and related models
+    - pytorch-tabnet  # For TabNet implementation
+    
+    # Feature Importance and Explainability
+    - shap  # For model interpretability
+    - lime  # For local interpretations
+    
+    # Visualization and Analysis
+    - plotly  # For interactive visualizations
+    - tqdm   # For progress bars
+    
+    # Data Processing
+    - openpyxl  # For Excel file support
+    - requests  # For API calls if needed
+    - joblib    # For model serialization
+    
+    # Optional - Uncomment if needed for your project
+    # Graph Neural Network - Will be installed if needed later
+    # - torch-geometric  
+    
+    # Additional packages for malware analysis
+    - scikit-image  # For image-based malware analysis
+    - scipy         # Scientific computing
+    - catboost      # Additional boosting algorithm
+    
+    # Additional useful packages for ML projects
+    - tensorflow==2.16.1  # For deep learning if needed
+    - keras             # High-level neural networks API
+    - optuna            # Hyperparameter optimization
+    - nbformat          # For notebook handling
+    
+    # Kaggle and Data Sources
+    - kaggle>=1.7        # For Kaggle API access
+    # Removed kagglehub which was causing the error
+    
