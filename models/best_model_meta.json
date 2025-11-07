@@ -1,0 +1,44 @@
+{
+  "model_var": "lgbm_opt3_fixed",
+  "model_name": "LightGBM \u2013 Optimization 3 (fixed)",
+  "selected_by": [
+    "ROC AUC",
+    "F1-Score",
+    "Test Acc"
+  ],
+  "BEST_THRESH": 0.44999999999999996,
+  "feature_cols": [
+    "id.resp_p",
+    "proto",
+    "service",
+    "duration",
+    "orig_bytes",
+    "resp_bytes",
+    "conn_state",
+    "local_resp",
+    "missed_bytes",
+    "history",
+    "orig_pkts",
+    "orig_ip_bytes",
+    "resp_pkts",
+    "resp_ip_bytes"
+  ],
+  "cat_cols": [
+    "conn_state",
+    "history",
+    "local_resp",
+    "proto",
+    "service"
+  ],
+  "metrics_row": {
+    "Model": "LightGBM \u2013 Optimization 3 (fixed)",
+    "Train Acc": 0.9998472826920282,
+    "Val Acc": 0.9993321557851339,
+    "Test Acc": 0.9995145988085608,
+    "Precision": 0.999555424231006,
+    "Recall": 0.9999525416650282,
+    "F1-Score": 0.9997539435127513,
+    "ROC AUC": 0.9998253772196417,
+    "Train Time": 75.48121738433838
+  }
+}
